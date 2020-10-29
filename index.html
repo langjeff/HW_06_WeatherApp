@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- html head metadata and css links -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+<link rel="stylesheet"
+    href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+    integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+<!-- end of head element     -->
+</head>
+<!-- page body begins -->
+<body>
+<!-- page header -->
+<header>
+<!-- Nav bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light d-flex">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <a class="navbar-brand  p3 mx-4" href="#">Weather App</a>
+    <form class="form-inline  mx-4">
+        <input class="form-control" type="search" placeholder="Enter a city" aria-label="Search" style="width: 30vw;">
+        <button class="btn btn-outline-success p3 mx-3" type="submit">Get weather</button>
+    </form>
+    <ul class="navbar-nav  p3 mx-4">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Recent Searches
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+</header>
+<!-- page main -->
+<main>
+
+</main>
+<!-- page footer -->
+<footer>
+
+</footer>
+
+<!-- links for js scripts     -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+    integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+    crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+    integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+    crossorigin="anonymous"></script>
+<script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
+<script src="./script.js"></script>
+<!-- page body div end -->
+</body>
+</html>
