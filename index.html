@@ -15,35 +15,66 @@
 <!-- page header -->
 <header>
 <!-- Nav bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light d-flex">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <a class="navbar-brand  p3 mx-4" href="#">Weather App</a>
-    <form class="form-inline  mx-4">
-        <input class="form-control" type="search" placeholder="Enter a city" aria-label="Search" style="width: 30vw;">
-        <button class="btn btn-outline-success p3 mx-3" type="submit">Get weather</button>
-    </form>
-    <ul class="navbar-nav  p3 mx-4">
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Recent Searches
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-            </div>
-        </li>
-    </ul>
+<nav class="navbar navbar-dark bg-dark">
+    <span class="navbar-brand mb-0 mx-auto h1 text-center">Weather App</span>
 </nav>
 
 </header>
 <!-- page main -->
 <main>
-
+    <!-- setup container for main elements -->
+    <div class="container-fluid">
+    <!-- set up row for elements        -->
+        <div class="d-md-inline-flex flex-row"> 
+            <!-- column div -->
+            <div class=".flex-md-column col">
+                <form class="form align-items-center p-2">
+                    <input class="form-control-md" type="search" placeholder="Enter a city" aria-label="Search">
+                    <button class="btn btn-outline-success mx-auto my-2" type="submit">Get weather</button>
+                </form>
+                <div class="dropdown p-2">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Recent Searches
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+            <!-- end of column div -->
+            </div>
+        <div class=".flex-md-column col-md-10">
+            <div class="d-md-inline-flex flex-row">
+                <div class="jumbotron my-3">
+                    <h1 class="display-4">Hello, world!</h1>
+                    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+                        featured content or information.</p>
+                    <hr class="my-4">
+                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                    <p class="lead">
+                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                    </p>
+                </div>
+            </div>
+            <div class="d-md-inline-flex flex-row">
+                <div class="card" style="width: 18rem;">
+                    <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                            content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    <!-- end of row div -->
+        </div>
+<!-- end of container div     -->
+    </div>
+<!-- end of main -->
 </main>
 <!-- page footer -->
 <footer>
