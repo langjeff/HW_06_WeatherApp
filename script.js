@@ -16,7 +16,7 @@ var maxEl = document.getElementById("max");
 var fiveDayEl = document.getElementById("fiveDay");
 
 // get current weather from openweathermap
-  fetch('http://api.openweathermap.org/data/2.5/weather?q=denver&appid=18c8e29c5116333e08aef89074ae53f7&units=imperial')
+  fetch('https://api.openweathermap.org/data/2.5/weather?q=denver&appid=18c8e29c5116333e08aef89074ae53f7&units=imperial')
   .then(function (response) {
     return response.json();
   })
@@ -60,7 +60,7 @@ var fiveDayEl = document.getElementById("fiveDay");
     lat = data.coord.lat;
     console.log(lat);
       // nested fetch for uv index
-      var uvUrl = 'http://api.openweathermap.org/data/2.5/uvi?lat=' + lat + '&lon=' + long + '&appid=18c8e29c5116333e08aef89074ae53f7';
+      var uvUrl = 'https://api.openweathermap.org/data/2.5/uvi?lat=' + lat + '&lon=' + long + '&appid=18c8e29c5116333e08aef89074ae53f7';
       fetch(uvUrl)
       .then(function (response) {
         return response.json();
