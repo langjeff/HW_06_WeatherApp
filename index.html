@@ -47,86 +47,34 @@
                 </div>
             <!-- end of column div -->
             </div>
-        <div class="flex-sm-column col-lg-10">
-            <div class="flex-row w-100 align-content-center">
-                <!-- jumbotraon for displaying current weathers -->
-                <div class="jumbotron" id="currentWeather">
-                    <div class="row">
-                    <div class="col-sm-5 mx-auto">
-                        <h1 class="display-4" id="city"></h1>
-                        <img id="currentIcon" src="" alt="weather image">
-                        <p class="lead" id="wDescription"></p>
-                        <p class="lead" id="wDate"></p>
-                        <p class="lead" id="wDay"></p>
+            <div class="flex-sm-column col-lg-10">
+                <div class="flex-row w-100 align-content-center">
+                    <!-- jumbotron for displaying current weathers -->
+                    <div class="jumbotron" id="currentWeather">
+                        <div class="row">
+                        <div class="col-sm-2 mx-auto">
+                            <h1 class="display-4" id="city"></h1>
+                            <img id="currentIcon" src="" alt="weather image">
+                            <p class="lead" id="wDescription"></p>
+                            <p class="lead" id="wDate"></p>
+                            <p class="lead" id="wDay"></p>
+                        </div>
+                        <div class="col-sm-8 mx-auto">
+                            <p id ="temp"></p>
+                            <p id="humidity"></p>
+                            <p id="wind"></p>
+                            <p id="uv"></p>
+                            <p id="min"></p>
+                            <p id="max"></p>
+                        </div>
+                        <!-- end of jumbotron rows -->
+                        </div>
+                    <!-- end of jumbotron -->
                     </div>
-                    <div class="col-sm-5 mx-auto">
-                        <p id ="temp"></p>
-                        <p id="humidity"></p>
-                        <p id="wind"></p>
-                        <p id="uv"></p>
-                        <p id="min"></p>
-                        <p id="max"></p>
-                    </div>
-                    </div>
-                <!-- end of jumbotron -->
+                    <!-- end of row -->
                 </div>
-                <!-- end of row -->
-            </div>
             <!-- row for 5 day weather forecast w/ cards -->
-            <div class="flex-sm-row w-100" id="fiveDay">
-                <div class="card d-inline-flex p-2 m-1" style="width: 15rem;">
-                    <img class="card-img-top text-center" src="http://openweathermap.org/img/wn/10d@2x.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Card title</h5>
-                        <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's
-                            content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card d-inline-flex p-2 m-1" style="width: 15rem;">
-                    <img class="card-img-top text-center" src="http://openweathermap.org/img/wn/10d@2x.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Card title</h5>
-                        <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the
-                            card's
-                            content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card d-inline-flex p-2 m-1" style="width: 15rem;">
-                    <img class="card-img-top text-center" src="http://openweathermap.org/img/wn/10d@2x.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Card title</h5>
-                        <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the
-                            card's
-                            content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card d-inline-flex p-2 m-1" style="width: 15rem;">
-                    <img class="card-img-top text-center" src="http://openweathermap.org/img/wn/10d@2x.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Card title</h5>
-                        <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the
-                            card's
-                            content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card d-inline-flex p-2 m-1" style="width: 15rem;">
-                    <img class="card-img-top text-center" src="http://openweathermap.org/img/wn/10d@2x.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Card title</h5>
-                        <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the
-                            card's
-                            content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                
-               
-                
-           
+            <div class="flex-sm-row w-100" id="fiveDay">          
            <!-- end of row      -->
             </div>
         </div>    
@@ -137,9 +85,6 @@
 <!-- end of main -->
 </main>
 <!-- page footer -->
-<footer>
-
-</footer>
 
 <!-- links for js scripts     -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
