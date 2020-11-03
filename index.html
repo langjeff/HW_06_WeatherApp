@@ -29,9 +29,9 @@
             <!-- column div -->
             <div class="flex-md-column col">
                 <!-- form for city search -->
-                <form class="form align-items-center p-2">
-                    <input class="form-control-md" type="search" placeholder="Enter a city" aria-label="Search">
-                    <button class="btn btn-outline-success mx-auto my-2" type="submit">Get weather</button>
+                <form class="form align-items-center p-2" id="searchForm">
+                    <input class="form-control-md" type="search" placeholder="Enter a city" aria-label="Search" id="searchCity">
+                    <button class="btn btn-outline-success mx-auto my-2" type="submit" id="searchButton">Get weather</button>
                 </form>
                 <div class="dropdown p-2">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
@@ -50,7 +50,7 @@
             <div class="flex-sm-column col-lg-10">
                 <div class="flex-row w-100 align-content-center">
                     <!-- jumbotron for displaying current weathers -->
-                    <div class="jumbotron" id="currentWeather">
+                    <div class="jumbotron invisible" id="currentWeather">
                         <div class="row">
                         <div class="col-sm-2 mx-auto">
                             <h1 class="display-4" id="city"></h1>

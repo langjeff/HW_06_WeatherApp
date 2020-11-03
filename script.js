@@ -1,7 +1,11 @@
 // code variables
 var long = "";
 var lat = "";
+var city = "";
+var cityUrl = "";
+var storedSearches = [];
 // html elements
+var jumbotronEl = document.getElementById("currentWeather");
 var cityEl = document.getElementById("city");
 var currIconEl = document.getElementById("currentIcon");
 var descriptionEl = document.getElementById("wDescription");
@@ -14,16 +18,27 @@ var uvEl = document.getElementById("uv");
 var minEl = document.getElementById("min");
 var maxEl = document.getElementById("max");
 var fiveDayEl = document.getElementById("fiveDay");
+var searchEl = document.getElementById("searchButton");
+var formEl = document.getElementById("searchForm");
+var inputEl = document.getElementById("searchCity");
 
-// get current weather from openweathermap
-  fetch('https://api.openweathermap.org/data/2.5/weather?q=denver&appid=18c8e29c5116333e08aef89074ae53f7&units=imperial')
+//event listener for searchButton click
+formEl.addEventListener("submit", function(event) {
+  event.preventDefault();
+  city = inputEl.value;
+  cityUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=18c8e29c5116333e08aef89074ae53f7&units=imperial";
+  
+  
+  fetch(cityUrl)
   .then(function (response) {
     return response.json();
   })
   .then(function (data) {
     // console.log(data);
     // console.log(data.name);
+    jumbotronEl.setAttribute("class","jumbotron visible");
     cityEl.textContent = data.name;
+
     // get data and convert to string
     var date = (data.dt);
     // console.log(date);
@@ -72,6 +87,7 @@ var fiveDayEl = document.getElementById("fiveDay");
       });
       //nested fetch for 5 day forecast
       var fiveDayUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + long + '&units=imperial&exclude=current,minutely,hourly,alerts&appid=18c8e29c5116333e08aef89074ae53f7';
+      fiveDayEl.innerHTML = "";
       fetch(fiveDayUrl)
       .then(function (response) {
       return response.json();
@@ -136,13 +152,29 @@ var fiveDayEl = document.getElementById("fiveDay");
       }
       });
   });
+    //set city value to local storage
+      var localSearch = localStorage.getItem("localCity");
+      if(localSearch === null) {
+        localSearch = [];
+      }
+      else {
+        localSearch = JSON.parse(localSearch);
+      }
+      localSearch.push(city);
+      var storeCity = JSON.stringify(localSearch);
+      localStorage.setItem("localSearch",storeCity);
+
+})
+
+
+
+
 
 
  
 
 
-// // icon link
-// http://openweathermap.org/img/wn/10d@2x.png
+
 
   
 
