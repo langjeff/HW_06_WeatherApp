@@ -31,7 +31,9 @@ formEl.addEventListener("submit", function(event) {
   
   fetch(cityUrl)
   .then(function (response) {
-    return response.json();
+    if(response.ok) {
+    return response.json();}
+    else {return;}
   })
   .then(function (data) {
     // console.log(data);
@@ -155,16 +157,29 @@ formEl.addEventListener("submit", function(event) {
     //set city value to local storage
       var localSearch = localStorage.getItem("localCity");
       if(localSearch === null) {
-        localSearch = [];
+        storedSearches = [];
       }
       else {
-        localSearch = JSON.parse(localSearch);
+        storedSearches = JSON.parse(localSearch);
       }
-      localSearch.push(city);
-      var storeCity = JSON.stringify(localSearch);
-      localStorage.setItem("localSearch",storeCity);
-
+      storedSearches.push(city);
+      var storeCity = JSON.stringify(storedSearches);
+      localStorage.setItem("localCity",storeCity);
 })
+
+//funciton to render local searches on load
+
+function renderLocalSearch () {
+      //checks local storage for localScores item
+    if(JSON.parse(localStorage.getItem("localCity")) === null) {
+        return;
+    }
+    // if localScores is in local storage, parses string to highScoreStore array.
+    storedSearches = JSON.parse(localStorage.getItem("localCity"));
+}
+
+
+
 
 
 
